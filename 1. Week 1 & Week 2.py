@@ -7,24 +7,24 @@ for num in range(1, 100):
 print(result_list)
 
 # Solution2
-# hop_wiz = []
-# hop = []
-# wiz = []
-# for num in range(1, 100):
-#     if num in range(0, 1000, 15):
-#         hop_wiz.append(num)
-#         print('Hop-Wiz')
-#     elif num in range(0, 1000, 3):
-#         hop.append(num)
-#         print('Hop')
-#     elif num in range(0, 1000, 5):
-#         wiz.append(num)
-#         print('Wiz')
-#     else:
-#         print(num)
-# print(hop_wiz)
-# print(hop)
-# print(wiz)
+hop_wiz = []
+hop = []
+wiz = []
+for num in range(1, 100):
+    if num in range(0, 1000, 15):
+        hop_wiz.append(num)
+        print('Hop-Wiz')
+    elif num in range(0, 1000, 3):
+        hop.append(num)
+        print('Hop')
+    elif num in range(0, 1000, 5):
+        wiz.append(num)
+        print('Wiz')
+    else:
+        print(num)
+print(hop_wiz)
+print(hop)
+print(wiz)
 
 
 # _________Ex2: Prime Numbers_____________
@@ -94,26 +94,26 @@ print(odd_char_r)
 
 # _________Ex5: User Input - Int. Num_____________
 print('User Input - Int. Num'.center(60, '_'))
-# # while True:
-# #     inp = input('Enter your number:')
-# #     if not inp.lstrip('-').isnumeric():
-# #         print('Please Enter only an Integer!')
-# #     elif isinstance(int(inp), int):
-# #         print(f'Your Integer is: {int(inp)}')
-# #         break
+while True:
+    inp = input('Enter your number:')
+    if not inp.lstrip('-').isnumeric():
+        print('Please Enter only an Integer!')
+    elif isinstance(int(inp), int):
+        print(f'Your Integer is: {int(inp)}')
+        break
 
 # _________Ex6: Mean Value_____________
 print('Mean Value'.center(60, '_'))
-# counter = 0
-# sum_inp = 0
-# while True:
-#     user_inp = input('Enter your numbers to get the mean:')
-#     if user_inp.lower() == 'q' or user_inp.lower() == 'quit':
-#         break
-#     elif not user_inp.lstrip('-').isdigit():
-#         print('Please Enter a Valid Number!')
-#         continue
-#     else:
-#         counter += 1
-#         sum_inp += int(user_inp)
-# print(sum_inp/counter if counter else 'No Entries! Closing Off')
+counter = 0
+sum_inp = 0
+while True:
+    user_inp = input('Enter your numbers to get the mean:')
+    if user_inp.lower() == 'q' or user_inp.lower() == 'quit':
+        break
+    elif not user_inp.lstrip('-').isdigit():
+        print('Please Enter a Valid Number!')
+        continue
+    else:
+        counter += 1
+        sum_inp += int(user_inp)
+print(sum_inp/counter if counter else 'No Entries! Closing Off')
