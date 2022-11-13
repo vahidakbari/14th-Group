@@ -44,14 +44,14 @@ for num in range(2, 1000):
 print('Prime Numbers below 1000:', prime_numbers)
 
 # Solution2
-prime_numbers = []
-for num in range(2, 1000):
-    for num2 in range(2, num):
-        if num % num2 == 0:
-            break
-    else:
-        prime_numbers.append(num)
-print('Prime Numbers below 1000:', prime_numbers)
+# prime_numbers = []
+# for num in range(2, 1000):
+#     for num2 in range(2, num):
+#         if num % num2 == 0:
+#             break
+#     else:
+#         prime_numbers.append(num)
+# print('Prime Numbers below 1000:', prime_numbers)
 
 
 # _________Ex3: Backwards Iteration_____________
