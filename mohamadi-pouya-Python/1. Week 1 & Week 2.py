@@ -3,9 +3,11 @@ print('Hop-Wiz Game'.center(60, '_'))
 # Solution1
 result_list = list()
 for num in range(1, 100):
-    result_list.append('Hop-Wiz' if num % 15 == 0 else 'Hop' if num % 3 == 0 else 'Wiz' if num % 5 == 0 else str(num))
+#     result_list.append('Hop-Wiz' if num % 15 == 0 else 'Hop' if num % 3 == 0 else 'Wiz' if num % 5 == 0 else str(num))
+    result_list.append('Hop-Wiz' if num in range(0, 100, 15) else 'Hop' if num in range(0, 100, 3) else 'Wiz' if num in range(0, 100, 5) else str(num))
 print(result_list)
 
+# this one is better in terms of performance
 # Solution2
 hop_wiz = []
 hop = []
@@ -27,6 +29,7 @@ print(hop)
 print(wiz)
 
 
+# use else (for) instead
 # _________Ex2: Prime Numbers_____________
 print('Prime Numbers'.center(60, '_'))
 # # Solution1
@@ -97,7 +100,9 @@ print('User Input - Int. Num'.center(60, '_'))
 while True:
     inp = input('Enter your number:')
     if not inp.lstrip('-').isnumeric():
-        print('Please Enter only an Integer!')
+#         print('Please Enter only an Integer!')
+        continue
+    # this will produce error on other cases
     elif isinstance(int(inp), int):
         print(f'Your Integer is: {int(inp)}')
         break
@@ -108,7 +113,9 @@ counter = 0
 sum_inp = 0
 while True:
     user_inp = input('Enter your numbers to get the mean:')
-    if user_inp.lower() == 'q' or user_inp.lower() == 'quit':
+    
+#     if user_inp.lower() == 'q' or user_inp.lower() == 'quit':
+    if user_inp.lower() in ('q', 'quit'):
         break
     elif not user_inp.lstrip('-').isdigit():
         print('Please Enter a Valid Number!')
